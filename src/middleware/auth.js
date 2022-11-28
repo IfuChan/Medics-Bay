@@ -14,7 +14,8 @@ const auth=async (req,res,next)=>{
 
         next();
     } catch (error) {
-        res.status(401).send(error);
+        res.status(401).send("You do not have authorization to view this page");
+        console.log(error)
     }
 }
 
