@@ -8,6 +8,7 @@ const Register = require("./models/register");
 const cookieParser = require("cookie-parser");
 const Specialist = require("./models/Specialist");
 const routes = require("./routes/main");
+const bcrypt=require("bcryptjs");
 
 //get user details in json(2), for cookies(3rd)
 app.use(express.json());
@@ -56,7 +57,6 @@ app.post("/register", async (req, res) => {
                 msg: "Email address is already registered"
             });
         } else {
-            console.log("user not exists");
             //generate jwt
             const token = await registerUser.generateAuthToken();
 
@@ -88,7 +88,8 @@ app.post("/login", async (req, res) => {
                 msg: "Invalid email or password"
             });
         } else {
-            if (userLoggedInCreds.password === pass) {
+            const passwordMatch = await bcrypt.compare(pass, userLoggedInCreds.password);
+            if (passwordMatch) {
                 console.log("User logged in successfully");
                 const token = await userLoggedInCreds.generateAuthToken();
                 res.cookie("jwt", token, {
@@ -103,7 +104,7 @@ app.post("/login", async (req, res) => {
             }
         }
     } catch (error) {
-        res.status(400).send(error)
+        res.status(400).send("invalid login details"+error);
     }
 })
 

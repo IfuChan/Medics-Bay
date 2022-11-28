@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const jwt=require("jsonwebtoken");
+const bcrypt=require("bcryptjs");
 
 const userSchema= new mongoose.Schema({
    fullname : {
@@ -49,6 +50,16 @@ userSchema.methods.generateAuthToken=async function(){
    }
 }
 
+//hash it before saving the schema
+userSchema.pre("save", async function (next){
+   if(this.isModified("password")){       //only hash password when password field is modified, i.e during reg or "change password"
+      this.password=await bcrypt.hash(this.password, 10);
+      next();
+   }
+   
+});
+
 //Collection:
 const Register=new mongoose.model("User", userSchema);
+
 module.exports=Register;
