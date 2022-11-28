@@ -12,9 +12,44 @@
 			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
 			crossorigin="anonymous"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 		<title>Specialist</title>
+		<style>
+			.review{
+				margin-top: 20px;
+				width: 300px;
+				background: gray;
+				padding: 10px 15px;
+				border: 1px solid white;
+				border-radius: 5px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.review .star-widget input{
+				display: none;
 
+			}
+			.star-widget label{
+				font-size: 25px;
+				color: #444;
+				padding: 10px;
+				float: right;
+			}
+			input:not(:checked)~label:hover,
+			input:not(:checked)~label:hover~label{
+				color: aqua;
+			}
+			input:checked~label{
+				color: aqua;
+			}
+			input#rate-5:checked~label{
+				color: yellow;
+				text-shadow: 0 0 20px #952;
+			}
+		</style>
 	</head>
 
 	<body style="background-color: #088875a1;">
@@ -48,6 +83,21 @@
 							>Set up an appointment</button>
 							</a>
 
+						</div>
+						<div class="review">
+						<div class="star-widget">
+							<input type="radio" name="rate" id="rate-5">
+							<label for="rate-5" class="fas fa-star"></label>
+							<input type="radio" name="rate" id="rate-4">
+							<label for="rate-4" class="fas fa-star"></label>
+							<input type="radio" name="rate" id="rate-3">
+							<label for="rate-3" class="fas fa-star"></label>
+							<input type="radio" name="rate" id="rate-2">
+							<label for="rate-2" class="fas fa-star"></label>
+							<input type="radio" name="rate" id="rate-1">
+							<label for="rate-1" class="fas fa-star"></label>
+							{{!Doctor Review will continue from here!}}
+						</div>
 						</div>
 					</div>
 				</div>
