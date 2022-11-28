@@ -6,7 +6,12 @@ const mongoose = require("mongoose");
 require("./db/conn");
 const Register = require("./models/register");
 const cookieParser = require("cookie-parser");
-const Specialist = require("./models/Specialist");
+const Medicine = require("./models/Medicine");
+const Dermatologists = require("./models/Dermatologists");
+const Cardiologists = require("./models/Cardiologists");
+const Gastrologists = require("./models/Gastrologists");
+const Urologists = require("./models/Urologists");
+const Psychiatrists = require("./models/Psychiatrists");
 const routes = require("./routes/main");
 const bcrypt=require("bcryptjs");
 
@@ -108,7 +113,7 @@ app.post("/login", async (req, res) => {
     }
 })
 
-// Specialist.create([
+// Medicine.create([
 //     {
 //         department: 'Medicine',
 //         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
@@ -119,6 +124,81 @@ app.post("/login", async (req, res) => {
 //     },
 //     {
 //         department: 'Medicine',
+//         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+// ])
+
+// Dermatologists.create([
+//     {
+//         department: 'Dermatologists',
+//         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Dermatologists',
+//         description: 'Dr. Mita , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Dermatologists',
+//         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+// ])
+
+// Cardiologists.create([
+//     {
+//         department: 'Cardiologists',
+//         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Cardiologists',
+//         description: 'Dr. Mita , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Cardiologists',
+//         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+// ])
+
+// Gastrologists.create([
+//     {
+//         department: 'Gastrologists',
+//         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Gastrologists',
+//         description: 'Dr. Mita , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Gastrologists',
+//         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+// ])
+
+// Urologists.create([
+//     {
+//         department: 'Urologists',
+//         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Urologists',
+//         description: 'Dr. Mita , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Urologists',
+//         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+// ])
+
+// Psychiatrists.create([
+//     {
+//         department: 'Psychiatrists',
+//         description: 'Dr. A F M Ekramuddaula , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Psychiatrists',
+//         description: 'Dr. Mita , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
+//     },
+//     {
+//         department: 'Psychiatrists',
 //         description: 'Dr. Rakib , MBBS, FCPS (ENT), MS (Otolaryngology) Coordinator & Senior Consultant'
 //     },
 // ])

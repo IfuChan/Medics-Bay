@@ -1,6 +1,11 @@
 const express = require('express');
 const auth = require("../middleware/auth");
-const Specialist = require('../models/Specialist');
+const Medicine = require('../models/Medicine');
+const Dermatologists = require('../models/Dermatologists');
+const Cardiologists = require('../models/Cardiologists');
+const Gastrologists = require('../models/Gastrologists');
+const Urologists = require('../models/Urologists');
+const Psychiatrists = require('../models/Psychiatrists');
 
 const router = express.Router();
 
@@ -53,12 +58,57 @@ router.get('/aboutus', (req, res) => {
     res.render("aboutus");
 });
 
-router.get("/specialist", async (req, res) => {
-    const medicine = await Specialist.find()
+router.get("/medicine", async (req, res) => {
+    const medicine = await Medicine.find()
     // console.log(medicine);
 
-    res.render("specialist", {
+    res.render("medicine", {
         medicine: medicine,
+    });
+});
+
+router.get("/dermatologists", async (req, res) => {
+    const dermatologists = await Dermatologists.find()
+    // console.log(medicine);
+
+    res.render("dermatologists", {
+        dermatologists: dermatologists,
+    });
+});
+
+router.get("/cardiologists", async (req, res) => {
+    const cardiologists = await Cardiologists.find()
+    // console.log(medicine);
+
+    res.render("cardiologists", {
+        cardiologists: cardiologists,
+    });
+});
+
+router.get("/gastrologists", async (req, res) => {
+    const gastrologists = await Gastrologists.find()
+    // console.log(medicine);
+
+    res.render("gastrologists", {
+        gastrologists: gastrologists,
+    });
+});
+
+router.get("/urologists", async (req, res) => {
+    const urologists = await Urologists.find()
+    // console.log(medicine);
+
+    res.render("urologists", {
+        urologists: urologists,
+    });
+});
+
+router.get("/psychiatrists", async (req, res) => {
+    const psychiatrists = await Psychiatrists.find()
+    // console.log(medicine);
+
+    res.render("psychiatrists", {
+        psychiatrists: psychiatrists,
     });
 });
 
