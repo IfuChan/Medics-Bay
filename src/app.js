@@ -98,7 +98,7 @@ app.post("/login", async (req, res) => {
                 console.log("User logged in successfully");
                 const token = await userLoggedInCreds.generateAuthToken();
                 res.cookie("jwt", token, {
-                    expires: new Date(Date.now() + 300000), //expires in 5 mins
+                    expires: new Date(Date.now() + 3000000), //expires in 50 mins
                     httpOnly: true,    //client side can not delete cookie
                 });
                 res.status(201).redirect("user-profile");

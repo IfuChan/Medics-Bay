@@ -112,8 +112,14 @@ router.get("/psychiatrists", async (req, res) => {
     });
 });
 
-router.get('/appointment', (req, res) => {
-    res.render("appointment");
+router.get('/appointment', auth, (req, res) => {
+    res.render("appointment", {
+        name: req.user.fullname,   //data to show in user profile
+        phone: req.user.phone,
+        email1: req.user.email,
+        dob: req.user.birthday.toLocaleDateString('en-CA'),
+        gender: req.user.gender,
+    });
 });
 
 router.get('/dashboard', (req, res) => {
