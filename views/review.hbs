@@ -27,7 +27,7 @@
 					height: 250px;
 				}
 			}
-			.container{
+			.cardContainer, .reviewContainer{
 				margin-top: 100px;
 				margin-bottom: 100px;
 			}
@@ -78,11 +78,11 @@
 <body>
 	{{>navbar}}
 
-	<div class="container">
+	<div class="container reviewContainer">
 		<h1 class="text-center fw-bold display-1">Doctor <span class="text-success">Reviews</span> </h1>
 	</div>
 	<section>
-		<div class="container">
+		<div class="container cardContainer">
 		<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">

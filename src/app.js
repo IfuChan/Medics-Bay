@@ -14,6 +14,7 @@ const Urologists = require("./models/Urologists");
 const Psychiatrists = require("./models/Psychiatrists");
 const routes = require("./routes/main");
 const bcrypt=require("bcryptjs");
+const dummydoc=require("./models/dummydoc.js");
 
 //get user details in json(2), for cookies(3rd)
 app.use(express.json());
@@ -112,6 +113,14 @@ app.post("/login", async (req, res) => {
         res.status(400).send("invalid login details"+error);
     }
 })
+
+//search Doctors
+app.post("/searchDoctors", async (req, res) => {
+    let payload=req.body.payload.trim();
+    let search=await dummydoc.find({name: {$regex: new RegExp(payload+'.*','i')}}).exec();
+    //search.search.slice(0,10); //to limit search results
+    res.send({payload: search});
+});
 
 // Medicine.create([
 //     {
