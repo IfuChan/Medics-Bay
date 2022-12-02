@@ -7,8 +7,32 @@ const Gastrologists = require('../models/Gastrologists');
 const Urologists = require('../models/Urologists');
 const Psychiatrists = require('../models/Psychiatrists');
 const dummydoc=require("../models/dummydoc");
+// const smthg=require('../../public/js/map.js');
 
 const router = express.Router();
+
+router.get('/map', (req, res) => {
+    let docs = [
+        {
+          "lat": 23.79257505141491,
+          "lng": 90.40803110635434,
+          "name": "Ifad"
+        },
+        {
+            "lat": 23.772897951978386,
+            "lng": 90.37175903312999,
+            "name": "Sam"
+        },
+        {
+            "lat": 24.772897951978586,
+            "lng": 91.37175903312990,
+            "name": "Witwicky"
+        }
+      ];
+    res.render("mapdemo",{
+        docs: docs
+    });
+});
 
 router.get('/', (req, res) => {
     // const user=req.cookies.user;

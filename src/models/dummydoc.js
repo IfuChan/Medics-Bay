@@ -12,6 +12,14 @@ const dummyDocSchema= new mongoose.Schema({
     qualification:{
         type: String,
         required: true
+    },
+    lat:{
+        type: Number,
+        required: true
+    },
+    lng:{
+        type: Number,
+        required: true
     }
 });
 
