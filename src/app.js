@@ -32,7 +32,6 @@ app.use(function (req, res, next) {
     } else {
         res.locals.isAuthenticated = true;
     }
-
     next();
 })
 
@@ -71,6 +70,7 @@ app.post("/register", async (req, res) => {
                 expires: new Date(Date.now() + 300000), //expires in 5 mins
                 httpOnly: true    //client side can not delete cookie
             });
+            // res.cookie("user", registerUser._id, {httpOnly: true});
 
             //data "get" done now save it
             const registered = await registerUser.save();
@@ -121,6 +121,7 @@ app.post("/searchDoctors", async (req, res) => {
     //search.search.slice(0,10); //to limit search results
     res.send({payload: search});
 });
+
 
 // Medicine.create([
 //     {

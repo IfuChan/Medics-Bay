@@ -6,10 +6,13 @@ const Cardiologists = require('../models/Cardiologists');
 const Gastrologists = require('../models/Gastrologists');
 const Urologists = require('../models/Urologists');
 const Psychiatrists = require('../models/Psychiatrists');
+const dummydoc=require("../models/dummydoc");
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
+    // const user=req.cookies.user;
+    // console.log("user token received: "+user);
     res.render("index");
 });
 
@@ -35,8 +38,14 @@ router.get('/signin', (req, res) => {
     res.render("signin");
 });
 
-router.get('/doctors-profile', (req, res) => {
-    res.render("doctors-profile");
+
+router.get('/doctors-profile/:id', async (req, res) => {
+    let doc=await dummydoc.findOne({_id: req.params.id});
+    res.render("doctors-profile", {
+        name: doc.name,
+        dept: doc.department,
+        qual: doc.qualification
+    });
 });
 
 router.get('/review', (req, res) => {
@@ -58,57 +67,73 @@ router.get('/aboutus', (req, res) => {
     res.render("aboutus");
 });
 
+// Old specialist showing system:
+// router.get("/medicine", async (req, res) => {
+//     const medicine = await Medicine.find()
+//     // console.log(medicine);
+
+//     res.render("medicine", {
+//         medicine: medicine,
+//     });
+// });
+
+// NEW:
 router.get("/medicine", async (req, res) => {
-    const medicine = await Medicine.find()
+    const medicine = await dummydoc.find({department: "Medicine"});
     // console.log(medicine);
 
-    res.render("medicine", {
-        medicine: medicine,
+    res.render("specialist", {
+        specialists: medicine,
+        dept: "Medicine"
     });
 });
 
 router.get("/dermatologists", async (req, res) => {
-    const dermatologists = await Dermatologists.find()
+    const dermatologists = await dummydoc.find({department: "Dermatologists"});
     // console.log(medicine);
 
-    res.render("dermatologists", {
-        dermatologists: dermatologists,
+    res.render("specialist", {
+        specialists: dermatologists,
+        dept: "Dermatology"
     });
 });
 
 router.get("/cardiologists", async (req, res) => {
-    const cardiologists = await Cardiologists.find()
+    const cardiologists = await dummydoc.find({department: "Cardiologists"});
     // console.log(medicine);
 
-    res.render("cardiologists", {
-        cardiologists: cardiologists,
+    res.render("specialist", {
+        specialists: cardiologists,
+        dept: "Cardiology"
     });
 });
 
 router.get("/gastrologists", async (req, res) => {
-    const gastrologists = await Gastrologists.find()
+    const gastrologists = await dummydoc.find({department: "Gastrologists"});
     // console.log(medicine);
 
-    res.render("gastrologists", {
-        gastrologists: gastrologists,
+    res.render("specialist", {
+        specialists: gastrologists,
+        dept: "Gastrology"
     });
 });
 
 router.get("/urologists", async (req, res) => {
-    const urologists = await Urologists.find()
+    const urologists = await dummydoc.find({department: "Urologists"});
     // console.log(medicine);
 
-    res.render("urologists", {
-        urologists: urologists,
+    res.render("specialist", {
+        specialists: urologists,
+        dept: "Urology"
     });
 });
 
 router.get("/psychiatrists", async (req, res) => {
-    const psychiatrists = await Psychiatrists.find()
-    // console.log(medicine);
+    const psychiatrists = await dummydoc.find({department: "Psychiatrists"});
 
-    res.render("psychiatrists", {
-        psychiatrists: psychiatrists,
+    res.render("specialist", {
+        specialists: psychiatrists,
+        dept: "Psychiatry"
     });
 });
 

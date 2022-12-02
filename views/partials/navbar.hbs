@@ -7,7 +7,7 @@ Writting : #2a303b }}
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <style>
-	.searcher{
+	#searcher{
 		max-width: 350px;
 	}
 	#result{
@@ -27,6 +27,7 @@ Writting : #2a303b }}
 	#result li a { margin: 0px; display: block; width: 100%; height: 100%;
 	padding: 10px 30px; 
 	text-decoration: none;
+	color: teal;
 	}
 </style>
 <nav
@@ -83,6 +84,11 @@ Writting : #2a303b }}
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
+								href="/psychiatrists"
+							>Psychiatrists</a></li>
+						<li><a
+								class="dropdown-item fs-5"
+								style="color: #2a303b;"
 								href="/medicine"
 							>Medicine</a></li>
 						<li><a
@@ -105,11 +111,6 @@ Writting : #2a303b }}
 								style="color: #2a303b;"
 								href="/urologists"
 							>Urologists</a></li>
-						<li><a
-								class="dropdown-item fs-5"
-								style="color: #2a303b;"
-								href="/psychiatrists"
-							>Psychiatrists</a></li>
 					</ul>
 				</li>
 				<li class="nav-item">
@@ -181,7 +182,7 @@ Writting : #2a303b }}
 				{{/if}}
 			</ul>
 
-			<div class="container searcher">
+			<div class="container" id="searcher">
 				<div class="search-bar" style="position: relative;">
 					<i class="fa fa-search" style="position: absolute; top: 10px; left: 10px"></i>
 					<input class="form-control me-2" type="search" name="search" 
@@ -236,13 +237,14 @@ Writting : #2a303b }}
 					return;
 				}
 				payload.forEach((item, index)=>{
-					searchResults.innerHTML += `<li class="list-group-item"><a href="${item._id}">${item.name}</a></li>`;
-					console.log(item.name, item._id);
+					searchResults.innerHTML += `<li class="list-group-item"><a href="/doctors-profile/${item._id}">${item.name}</a></li>`;
+					console.log(item.name, item._id, item.qualification, item.department);
 				});
 			});
 			return;
 			}
 			searchResults.innerHTML='';
 		}
+		
 	</script>
 </nav>
