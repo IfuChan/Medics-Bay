@@ -1,1 +1,4 @@
 node_modules
+public/js/map.js
+views/mapdemo.hbs
+.env

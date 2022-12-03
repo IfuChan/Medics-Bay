@@ -44,8 +44,13 @@
 					</div>
 					<div class="col-md-8">
 						<div class="card-body" style="padding-top: 70px;">
-							<h5 class="card-title">Department: {{this.department}}</h5>
-							<p class="card-text">{{this.description}}</p>
+							<h5 class="card-title">Name: Dr. {{this.name}}</h5>
+							<p class="card-text">Department: {{this.department}} <br>
+								<span class="text-muted">
+									{{this.qualification}}
+								</span>
+							</p>
+							
 							<div class="d-grid gap-2 d-md-block">
 								<a href="/appointment">
 									<button
@@ -53,7 +58,7 @@
 									type="button"
 								>Set up an appointment</button>
 								</a>
-								<a href="/doctors-profile">
+								<a href="/doctors-profile/{{this._id}}">
 									<button
 									style="background-color: #035347; color: #c9d0d0; border-radius: 6px; padding-top: 5px; padding-bottom: 5px; padding-right: 10px; padding-left: 10px;"
 									type="button"

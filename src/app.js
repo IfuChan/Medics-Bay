@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { urlencoded } = require("body-parser");
 const express = require("express");
 const hbs = require("hbs")
@@ -14,6 +15,7 @@ const Urologists = require("./models/Urologists");
 const Psychiatrists = require("./models/Psychiatrists");
 const routes = require("./routes/main");
 const bcrypt=require("bcryptjs");
+const dummydoc=require("./models/dummydoc.js");
 
 //get user details in json(2), for cookies(3rd)
 app.use(express.json());
@@ -31,7 +33,6 @@ app.use(function (req, res, next) {
     } else {
         res.locals.isAuthenticated = true;
     }
-
     next();
 })
 
@@ -70,6 +71,7 @@ app.post("/register", async (req, res) => {
                 expires: new Date(Date.now() + 300000), //expires in 5 mins
                 httpOnly: true    //client side can not delete cookie
             });
+            // res.cookie("user", registerUser._id, {httpOnly: true});
 
             //data "get" done now save it
             const registered = await registerUser.save();
@@ -112,6 +114,15 @@ app.post("/login", async (req, res) => {
         res.status(400).send("invalid login details"+error);
     }
 })
+
+//search Doctors
+app.post("/searchDoctors", async (req, res) => {
+    let payload=req.body.payload.trim();
+    let search=await dummydoc.find({name: {$regex: new RegExp(payload+'.*','i')}}).exec();
+    //search.search.slice(0,10); //to limit search results
+    res.send({payload: search});
+});
+
 
 // Medicine.create([
 //     {

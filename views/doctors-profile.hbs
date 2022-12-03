@@ -51,8 +51,14 @@
 			}
 		</style>
 	</head>
+	<script>
+		function hideSearch(){
+			search=document.getElementById("searcher");
+			search.style.display='none';
+		}	
+	</script>
 
-	<body style="background-color: #088875a1;">
+	<body style="background-color: #088875a1;" onload="hideSearch()">
 
 		{{>navbar}}
 
@@ -72,9 +78,9 @@
 
 				<div class="col-md-6">
 					<div class="card-body" style="padding-top: 20px;">
-						<h5 class="card-title">Department: ENT</h5>
-						<p class="card-text fs-5">Dr. A F M Ekramuddaula , MBBS, FCPS (ENT),
-							MS (Otolaryngology) Coordinator & Senior Consultant</p>
+						<h5 class="card-title">Dr. {{name}}</h5>
+						<p class="card-text fs-5">Department: {{dept}}</p>
+						<p class="card-text">{{qual}}</p>
 						<div class="d-grid gap-2 d-md-block">
 							<a href="/appointment">
 							<button
