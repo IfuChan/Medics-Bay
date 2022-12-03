@@ -108,7 +108,8 @@ router.get("/medicine", async (req, res) => {
 
     res.render("specialist", {
         specialists: medicine,
-        dept: "Medicine"
+        dept: "Medicine",
+        mapApi: process.env.GAPI
     });
 });
 
@@ -118,7 +119,8 @@ router.get("/dermatologists", async (req, res) => {
 
     res.render("specialist", {
         specialists: dermatologists,
-        dept: "Dermatology"
+        dept: "Dermatology",
+        mapApi: process.env.GAPI
     });
 });
 
@@ -128,7 +130,8 @@ router.get("/cardiologists", async (req, res) => {
 
     res.render("specialist", {
         specialists: cardiologists,
-        dept: "Cardiology"
+        dept: "Cardiology",
+        mapApi: process.env.GAPI
     });
 });
 
@@ -138,7 +141,8 @@ router.get("/gastrologists", async (req, res) => {
 
     res.render("specialist", {
         specialists: gastrologists,
-        dept: "Gastrology"
+        dept: "Gastrology",
+        mapApi: process.env.GAPI
     });
 });
 
@@ -148,7 +152,8 @@ router.get("/urologists", async (req, res) => {
 
     res.render("specialist", {
         specialists: urologists,
-        dept: "Urology"
+        dept: "Urology",
+        mapApi: process.env.GAPI
     });
 });
 
@@ -157,7 +162,8 @@ router.get("/psychiatrists", async (req, res) => {
 
     res.render("specialist", {
         specialists: psychiatrists,
-        dept: "Psychiatry"
+        dept: "Psychiatry",
+        mapApi: process.env.GAPI
     });
 });
 

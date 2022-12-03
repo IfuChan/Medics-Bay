@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { urlencoded } = require("body-parser");
 const express = require("express");
 const hbs = require("hbs")
