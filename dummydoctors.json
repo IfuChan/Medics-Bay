@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "6386d46c6922921b23008b60"
+  },
+  "name": "Ifad Zaman",
+  "department": "Psychiatrists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Executive",
+  "lat": "23.807430327535084",
+  "lng": "90.40378081129892"
+},{
+  "_id": {
+    "$oid": "6386d4a66922921b23008b61"
+  },
+  "name": "Umme Sathi",
+  "department": "Urologists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.77691189513065",
+  "lng": "90.36182399943006"
+},{
+  "_id": {
+    "$oid": "6386d4c56922921b23008b62"
+  },
+  "name": "Eusha Mahzabin",
+  "department": "Gastrologists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.802810171267094",
+  "lng": "90.46230728185955"
+},{
+  "_id": {
+    "$oid": "6386d4d96922921b23008b63"
+  },
+  "name": "nusrat zahan",
+  "department": "Cardiologists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.752845789899368",
+  "lng": "90.36918137619534"
+},{
+  "_id": {
+    "$oid": "6386d50b6922921b23008b64"
+  },
+  "name": "John Doe",
+  "department": "Dermatologists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.730895617961103",
+  "lng": "90.38934603825982"
+},{
+  "_id": {
+    "$oid": "6386d5286922921b23008b65"
+  },
+  "name": "Lionel Messi",
+  "department": "Medicine",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.814436155385252",
+  "lng": "90.38130742277376"
+},{
+  "_id": {
+    "$oid": "6386d53a6922921b23008b66"
+  },
+  "name": "Cristiano Ronaldo",
+  "department": "Psychiatrists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.77691189513065",
+  "lng": "90.36182399943006"
+},{
+  "_id": {
+    "$oid": "6386d5496922921b23008b67"
+  },
+  "name": "Richarlison",
+  "department": "Urologists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "lat": "23.752845789899368",
+  "lng": "90.36918137619534"
+},{
+  "_id": {
+    "$oid": "6386d5656922921b23008b68"
+  },
+  "name": "Jashim Kan",
+  "department": "Psychiatrists",
+  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology) Senior Consultant",
+  "lat": "23.802810171267094",
+  "lng": "90.46230728185955"
+},{
+  "_id": {
+    "$oid": "6386d5746922921b23008b69"
+  },
+  "name": "Mr. Something CHoudhury",
+  "department": "Psychiatrists",
+  "qualification": "MBBS, MS (Otolaryngology) Coordinator & Senior Consultant",
+  "lat": "23.746735034118778",
+  "lng": "90.41523310483726"
+}]

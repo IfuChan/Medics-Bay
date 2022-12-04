@@ -1,12 +1,6 @@
 const express = require('express');
 const auth = require("../middleware/auth");
-const Medicine = require('../models/Medicine');
-const Dermatologists = require('../models/Dermatologists');
-const Cardiologists = require('../models/Cardiologists');
-const Gastrologists = require('../models/Gastrologists');
-const Urologists = require('../models/Urologists');
-const Psychiatrists = require('../models/Psychiatrists');
-const dummydoc=require("../models/dummydoc");
+const dummydoc = require("../models/dummydoc");
 // const smthg=require('../../public/js/map.js');
 
 const router = express.Router();
@@ -41,7 +35,7 @@ router.get('/signin', (req, res) => {
 
 
 router.get('/doctors-profile/:id', async (req, res) => {
-    let doc=await dummydoc.findOne({_id: req.params.id});
+    let doc = await dummydoc.findOne({ _id: req.params.id });
     res.render("doctors-profile", {
         name: doc.name,
         dept: doc.department,
@@ -80,7 +74,7 @@ router.get('/aboutus', (req, res) => {
 
 // NEW:
 router.get("/medicine", async (req, res) => {
-    const medicine = await dummydoc.find({department: "Medicine"});
+    const medicine = await dummydoc.find({ department: "Medicine" });
     // console.log(medicine);
 
     res.render("specialist", {
@@ -91,7 +85,7 @@ router.get("/medicine", async (req, res) => {
 });
 
 router.get("/dermatologists", async (req, res) => {
-    const dermatologists = await dummydoc.find({department: "Dermatologists"});
+    const dermatologists = await dummydoc.find({ department: "Dermatologists" });
     // console.log(medicine);
 
     res.render("specialist", {
@@ -102,7 +96,7 @@ router.get("/dermatologists", async (req, res) => {
 });
 
 router.get("/cardiologists", async (req, res) => {
-    const cardiologists = await dummydoc.find({department: "Cardiologists"});
+    const cardiologists = await dummydoc.find({ department: "Cardiologists" });
     // console.log(medicine);
 
     res.render("specialist", {
@@ -113,7 +107,7 @@ router.get("/cardiologists", async (req, res) => {
 });
 
 router.get("/gastrologists", async (req, res) => {
-    const gastrologists = await dummydoc.find({department: "Gastrologists"});
+    const gastrologists = await dummydoc.find({ department: "Gastrologists" });
     // console.log(medicine);
 
     res.render("specialist", {
@@ -124,7 +118,7 @@ router.get("/gastrologists", async (req, res) => {
 });
 
 router.get("/urologists", async (req, res) => {
-    const urologists = await dummydoc.find({department: "Urologists"});
+    const urologists = await dummydoc.find({ department: "Urologists" });
     // console.log(medicine);
 
     res.render("specialist", {
@@ -135,7 +129,7 @@ router.get("/urologists", async (req, res) => {
 });
 
 router.get("/psychiatrists", async (req, res) => {
-    const psychiatrists = await dummydoc.find({department: "Psychiatrists"});
+    const psychiatrists = await dummydoc.find({ department: "Psychiatrists" });
 
     res.render("specialist", {
         specialists: psychiatrists,
