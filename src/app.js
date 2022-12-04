@@ -117,6 +117,14 @@ app.post("/searchDoctors", async (req, res) => {
     res.send({ payload: search });
 });
 
+//search Doctors
+app.post("/doctors-profile/searchDoctors", async (req, res) => {
+    let payload=req.body.payload.trim();
+    let search=await dummydoc.find({name: {$regex: new RegExp(payload+'.*','i')}}).exec();
+    //search.search.slice(0,10); //to limit search results
+    res.send({payload: search});
+});
+
 app.listen(process.env.PORT | 3000, () => {
     console.log("Server Start");
 });

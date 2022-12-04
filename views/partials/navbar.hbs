@@ -18,6 +18,12 @@ Writting : #2a303b }}
 	.search-bar input{
 		text-indent: 20px;
 	}
+	.noDoc{
+		margin: 0px; display: block; width: 100%; height: 100%;
+		padding: 10px 30px; 
+		color: red;
+		font-weight:500 ;
+	}
 	#result li { 
 		padding: 0px;
 	}
@@ -233,7 +239,7 @@ Writting : #2a303b }}
 				let payload=data.payload;
 				searchResults.innerHTML='';
 				if(payload.length<1){
-					searchResults.innerHTML='<li class="list-group-item">No Doctors Found</li>';
+					searchResults.innerHTML='<li class="list-group-item"><p class="noDoc">No Doctors Found</p></li>';
 					return;
 				}
 				payload.forEach((item, index)=>{
