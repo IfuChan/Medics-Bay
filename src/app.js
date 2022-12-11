@@ -10,6 +10,7 @@ const cookieParser = require("cookie-parser");
 const routes = require("./routes/main");
 const bcrypt = require("bcryptjs");
 const dummydoc = require("./models/dummydoc.js");
+const Appointment = require("./models/dummydoc.js");
 
 //get user details in json(2), for cookies(3rd)
 app.use(express.json());
@@ -36,6 +37,10 @@ app.use('', routes);
 app.set('view engine', 'hbs')
 app.set("views", "views")
 hbs.registerPartials("views/partials")
+
+app.post("/appointment", async (req, res) => {
+    res.send("hello")
+})
 
 //user registration
 app.post("/register", async (req, res) => {
@@ -119,10 +124,10 @@ app.post("/searchDoctors", async (req, res) => {
 
 //search Doctors
 app.post("/doctors-profile/searchDoctors", async (req, res) => {
-    let payload=req.body.payload.trim();
-    let search=await dummydoc.find({name: {$regex: new RegExp(payload+'.*','i')}}).exec();
+    let payload = req.body.payload.trim();
+    let search = await dummydoc.find({ name: { $regex: new RegExp(payload + '.*', 'i') } }).exec();
     //search.search.slice(0,10); //to limit search results
-    res.send({payload: search});
+    res.send({ payload: search });
 });
 
 app.listen(process.env.PORT | 3000, () => {
