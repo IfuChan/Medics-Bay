@@ -6,20 +6,20 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     //get cookie for recently viewed doctor:
-    if(req.cookies.recvwd != null){
-        res.locals.recvwd=true;
-        var docId=req.cookies.recvwd;
-        var recdoclist=docId.split(",");
+    if (req.cookies.recvwd != null) {
+        res.locals.recvwd = true;
+        var docId = req.cookies.recvwd;
+        var recdoclist = docId.split(",");
         let doc = await dummydoc.find({ _id: recdoclist });
-        revdoc=doc.reverse().slice(0,4);
+        revdoc = doc.reverse().slice(0, 4);
         res.render("index", {
             recdoc: revdoc
         });
-    }else{
-        res.locals.recvwd=false;
+    } else {
+        res.locals.recvwd = false;
         res.render("index");
     }
-    
+
 });
 
 router.get('/login', (req, res) => {
@@ -47,15 +47,15 @@ router.get('/signin', (req, res) => {
 
 router.get('/doctors-profile/:id', async (req, res) => {
     let doc = await dummydoc.findOne({ _id: req.params.id });
-    if(req.cookies.recvwd == null){
+    if (req.cookies.recvwd == null) {
         res.cookie("recvwd", req.params.id, {
             expires: new Date(Date.now() + 600000), //expires in 10 min
             httpOnly: true    //client side can not delete cookie
         });
     }
-    else{
-        var recCookie=req.cookies.recvwd;
-        var temp=recCookie+","+req.params.id;
+    else {
+        var recCookie = req.cookies.recvwd;
+        var temp = recCookie + "," + req.params.id;
         res.cookie("recvwd", temp, {
             expires: new Date(Date.now() + 600000), //expires in 10 min
             httpOnly: true    //client side can not delete cookie
@@ -87,17 +87,7 @@ router.get('/aboutus', (req, res) => {
     res.render("aboutus");
 });
 
-// Old specialist showing system:
-// router.get("/medicine", async (req, res) => {
-//     const medicine = await Medicine.find()
-//     // console.log(medicine);
 
-//     res.render("medicine", {
-//         medicine: medicine,
-//     });
-// });
-
-// NEW:
 router.get("/medicine", async (req, res) => {
     const medicine = await dummydoc.find({ department: "Medicine" });
     // console.log(medicine);

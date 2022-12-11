@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const routes = require("./routes/main");
 const bcrypt = require("bcryptjs");
 const dummydoc = require("./models/dummydoc.js");
-const Appointment = require("./models/dummydoc.js");
+// const Appointment = require("./models/dummydoc.js");
 
 //get user details in json(2), for cookies(3rd)
 app.use(express.json());
@@ -38,8 +38,9 @@ app.set('view engine', 'hbs')
 app.set("views", "views")
 hbs.registerPartials("views/partials")
 
+// Appointment function
 app.post("/appointment", async (req, res) => {
-    res.send("hello")
+    res.status(201).redirect("dashboard");
 })
 
 //user registration
