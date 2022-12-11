@@ -1,14 +1,26 @@
 const express = require('express');
 const auth = require("../middleware/auth");
 const dummydoc = require("../models/dummydoc");
-// const smthg=require('../../public/js/map.js');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    // const user=req.cookies.user;
-    // console.log("user token received: "+user);
-    res.render("index");
+router.get('/', async (req, res) => {
+    //get cookie for recently viewed doctor:
+    if(req.cookies.recvwd != null){
+        res.locals.recvwd=true;
+        var docId=req.cookies.recvwd;
+        var viewTime=req.cookies.recvwdtime;
+        const date = new Date(viewTime);
+        let doc = await dummydoc.findOne({ _id: docId });
+        res.render("index", {
+            recdoc: doc,
+            time: date.toDateString(),
+        });
+    }else{
+        res.locals.recvwd=false;
+        res.render("index");
+    }
+    
 });
 
 router.get('/login', (req, res) => {
@@ -36,6 +48,14 @@ router.get('/signin', (req, res) => {
 
 router.get('/doctors-profile/:id', async (req, res) => {
     let doc = await dummydoc.findOne({ _id: req.params.id });
+    res.cookie("recvwd", req.params.id, {
+        expires: new Date(Date.now() + 600000), //expires in 10 min
+        httpOnly: true    //client side can not delete cookie
+    });
+    res.cookie("recvwdtime", new Date(Date.now()), {
+        expires: new Date(Date.now() + 600000), //expires in 10 min
+        httpOnly: true    //client side can not delete cookie
+    });
     res.render("doctors-profile", {
         name: doc.name,
         dept: doc.department,
