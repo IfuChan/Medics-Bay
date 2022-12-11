@@ -9,12 +9,11 @@ router.get('/', async (req, res) => {
     if(req.cookies.recvwd != null){
         res.locals.recvwd=true;
         var docId=req.cookies.recvwd;
-        var viewTime=req.cookies.recvwdtime;
-        const date = new Date(viewTime);
-        let doc = await dummydoc.findOne({ _id: docId });
+        var recdoclist=docId.split(",");
+        let doc = await dummydoc.find({ _id: recdoclist });
+        revdoc=doc.reverse().slice(0,4);
         res.render("index", {
-            recdoc: doc,
-            time: date.toDateString(),
+            recdoc: revdoc
         });
     }else{
         res.locals.recvwd=false;
@@ -48,14 +47,20 @@ router.get('/signin', (req, res) => {
 
 router.get('/doctors-profile/:id', async (req, res) => {
     let doc = await dummydoc.findOne({ _id: req.params.id });
-    res.cookie("recvwd", req.params.id, {
-        expires: new Date(Date.now() + 600000), //expires in 10 min
-        httpOnly: true    //client side can not delete cookie
-    });
-    res.cookie("recvwdtime", new Date(Date.now()), {
-        expires: new Date(Date.now() + 600000), //expires in 10 min
-        httpOnly: true    //client side can not delete cookie
-    });
+    if(req.cookies.recvwd == null){
+        res.cookie("recvwd", req.params.id, {
+            expires: new Date(Date.now() + 600000), //expires in 10 min
+            httpOnly: true    //client side can not delete cookie
+        });
+    }
+    else{
+        var recCookie=req.cookies.recvwd;
+        var temp=recCookie+","+req.params.id;
+        res.cookie("recvwd", temp, {
+            expires: new Date(Date.now() + 600000), //expires in 10 min
+            httpOnly: true    //client side can not delete cookie
+        });
+    }
     res.render("doctors-profile", {
         name: doc.name,
         dept: doc.department,

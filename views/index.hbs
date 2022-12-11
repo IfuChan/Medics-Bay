@@ -14,17 +14,25 @@
 
 		<title>Home</title>
     <style>
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 770px) {
         .contactus{
           margin: 50px 20px 50px; 
           padding: 5px 30px;
         }
+        .recentView{
+          width: 100%;
+          margin: 0 auto;
+        }
       }
-      @media only screen and (min-width: 600px) {
+      @media only screen and (min-width: 770px) {
         .contactus{
           margin: 50px 20px 50px; 
           padding: 10px 100px;
         }
+      }
+      .recsec{
+        border-top: 5px solid teal;
+        border-bottom: 5px solid teal;
       }
     </style>
 	</head>
@@ -125,26 +133,31 @@
   </section>
 
   {{#if recvwd}}
-  <section class="container">
-    <h1 class="mt-5 mb-3 text-muted text-center">Recently Viewed Doctors</h1>
-    <div class="recentView gap-3 justify-content-center d-md-flex justify-content-md-start">
-        <div class="card shadow mb-3" style="max-width: 260px;">
+  <section class="recsec py-5">
+    <div class="container">
+
+    
+    <h1 class="mt-2 mb-3 text-muted text-center">Recently Viewed Doctors</h1>
+    <div class="gap-3 justify-content-center d-md-flex justify-content-md-start">
+      {{#each recdoc}}
+        <div class="recentView card shadow-sm mb-3" style="max-width: 240px; height:120px;">
         <div class="row g-0">
-          <div class="col-4 d-flex flex-wrap align-items-center p-2">
+          <div class="col-4 d-flex flex-column p-2">
             <img src="/static/images/docplaceholder/1.jpg" class="img-fluid rounded-circle border border-info shadow-sm" alt="doctor image" width="70px">
           </div>
           <div class="col-8">
             <div class="card-body p-2">
-              <h5 class="card-title"><a href="/doctors-profile/{{recdoc._id}}" class="stretched-link" style="text-decoration: none; color: black;">Dr. {{recdoc.name}}</a></h5>
-              <p class="card-text"> Dept: {{recdoc.department}}</p>
-              <p class="card-text"><small class="text-muted">Seen: {{time}}</small></p>
+              <h5 class="card-title"><a href="/doctors-profile/{{this._id}}" class="stretched-link" style="text-decoration: none; color: black;">Dr. {{this.name}}</a></h5>
+              <p class="card-text"> Dept: {{this.department}}</p>
+              <p class="card-text position-absolute bottom-0"><small class="text-muted">Available now</small></p>
             </div>
           </div>
         </div>
       </div>
+      {{/each}}
 
     </div>
-    
+    </div>
   </section>
   {{/if}}
 
