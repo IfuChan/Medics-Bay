@@ -112,7 +112,17 @@ app.post("/login", async (req, res) => {
 //search Doctors
 app.post("/searchDoctors", async (req, res) => {
     let payload = req.body.payload.trim();
-    let search = await dummydoc.find({ name: { $regex: new RegExp(payload + '.*', 'i') } }).exec();
+    // let search = await dummydoc.find({ name: { $regex: new RegExp(payload + '.*', 'i') } }).exec();
+    let search=await dummydoc.find({
+        $or:[
+            {
+                name: {$regex: new RegExp(payload+'.*','i')}
+            },
+            {
+                department: {$regex: new RegExp('^'+payload+'.*','i')}
+            }
+        ]
+    }).exec();
     //search.search.slice(0,10); //to limit search results
     res.send({ payload: search });
 });
@@ -120,7 +130,16 @@ app.post("/searchDoctors", async (req, res) => {
 //search Doctors
 app.post("/doctors-profile/searchDoctors", async (req, res) => {
     let payload=req.body.payload.trim();
-    let search=await dummydoc.find({name: {$regex: new RegExp(payload+'.*','i')}}).exec();
+    let search=await dummydoc.find({
+        $or:[
+            {
+                name: {$regex: new RegExp(payload+'.*','i')}
+            },
+            {
+                department: {$regex: new RegExp('^'+payload+'.*','i')}
+            }
+        ]
+    }).exec();
     //search.search.slice(0,10); //to limit search results
     res.send({payload: search});
 });
