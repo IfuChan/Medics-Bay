@@ -4,37 +4,19 @@
 #1cc3b2
 Writting : #2a303b }}
 <head>
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+	/>
 </head>
 <style>
-	#searcher{
-		max-width: 350px;
-	}
-	#result{
-		z-index: 999;
-		position: absolute;
-		width: 100%;
-	}
-	.search-bar input{
-		text-indent: 20px;
-	}
-	.noDoc{
-		margin: 0px; display: block; width: 100%; height: 100%;
-		padding: 10px 30px; 
-		color: red;
-		font-weight:500 ;
-	}
-	#result li { 
-		padding: 0px;
-	}
-	#result li:hover { 
-		background-color: aliceblue;
-	}
-	#result li a { margin: 0px; display: block; width: 100%; height: 100%;
-	padding: 10px 30px; 
-	text-decoration: none;
-	color: teal;
-	}
+	#searcher{ max-width: 350px; } #result{ z-index: 999; position: absolute;
+	width: 100%; } .search-bar input{ text-indent: 20px; } .noDoc{ margin: 0px;
+	display: block; width: 100%; height: 100%; padding: 10px 30px; color: red;
+	font-weight:500 ; } #result li { padding: 0px; } #result li:hover {
+	background-color: aliceblue; } #result li a { margin: 0px; display: block;
+	width: 100%; height: 100%; padding: 10px 30px; text-decoration: none; color:
+	teal; }
 </style>
 <nav
 	class="navbar navbar-expand-lg"
@@ -90,32 +72,32 @@ Writting : #2a303b }}
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
-								href="/psychiatrists"
+								href="/department/psychiatrists"
 							>Psychiatrists</a></li>
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
-								href="/medicine"
+								href="/department/medicine"
 							>Medicine</a></li>
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
-								href="/dermatologists"
+								href="/department/dermatologists"
 							>Dermatologists</a></li>
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b"
-								href="/cardiologists"
+								href="/department/cardiologists"
 							>Cardiologists</a></li>
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
-								href="/gastrologists"
+								href="/department/gastrologists"
 							>Gastrologists</a></li>
 						<li><a
 								class="dropdown-item fs-5"
 								style="color: #2a303b;"
-								href="/urologists"
+								href="/department/urologists"
 							>Urologists</a></li>
 					</ul>
 				</li>
@@ -174,7 +156,7 @@ Writting : #2a303b }}
 							class="nav-link"
 							style="color: #2a303b; padding-right: 30px;"
 							aria-current="page"
-							href="/signin"
+							href="/signup"
 						>Sign Up</a>
 					</li>
 					<li class="nav-item">
@@ -190,17 +172,25 @@ Writting : #2a303b }}
 
 			<div class="container" id="searcher">
 				<div class="search-bar" style="position: relative;">
-					<i class="fa fa-search" style="position: absolute; top: 10px; left: 10px"></i>
-					<input class="form-control me-2" type="search" name="search" 
-					id="search-box" placeholder="Search Doctors" 
-					onkeyup="sendData(this)" autocomplete="off">
+					<i
+						class="fa fa-search"
+						style="position: absolute; top: 10px; left: 10px"
+					></i>
+					<input
+						class="form-control me-2"
+						type="search"
+						name="search"
+						id="search-box"
+						placeholder="Search Doctors"
+						onkeyup="sendData(this)"
+						autocomplete="off"
+					/>
 					<ul class="list-group" id="result"></ul>
 				</div>
-				
-			</div>
-			
 
-			{{!-- <form
+			</div>
+
+			{{! <form
 				class="d-flex"
 				role="search fs-5"
 				style="padding-right: 30px; padding-top: 15px;"
@@ -217,40 +207,25 @@ Writting : #2a303b }}
 					style="padding-right: 10px; padding-left: 10px;"
 				>Search</button>
 
-			</form> --}}
+			</form> }}
 
 		</div>
 	</div>
 	<script>
-		function sendData(q){
-			const searchResults = document.getElementById('result');
-			let match=q.value.match(/^[a-zA-Z ]*/);
-			let match2=q.value.match(/\s*/);
-			if (match2[0]===q.value){
-				searchResults.innerHTML='';
-				return;
-			}
-			if(match[0]===q.value){
-				fetch('searchDoctors', {
-				method: 'POST',
-				headers:{'Content-Type': 'application/json'},
-				body: JSON.stringify({payload: q.value})
-			}).then(res=>res.json()).then(data=>{
-				let payload=data.payload;
-				searchResults.innerHTML='';
-				if(payload.length<1){
-					searchResults.innerHTML='<li class="list-group-item"><p class="noDoc">No Doctors Found</p></li>';
-					return;
-				}
-				payload.forEach((item, index)=>{
-					searchResults.innerHTML += `<li class="list-group-item"><a href="/doctors-profile/${item._id}">${item.name}</a></li>`;
-					console.log(item.name, item._id, item.qualification, item.department);
-				});
-			});
-			return;
-			}
-			searchResults.innerHTML='';
-		}
-		
+		function sendData(q){ const searchResults =
+		document.getElementById('result'); let match=q.value.match(/^[a-zA-Z ]*/);
+		let match2=q.value.match(/\s*/); if (match2[0]===q.value){
+		searchResults.innerHTML=''; return; } if(match[0]===q.value){
+		fetch('searchDoctors', { method: 'POST', headers:{'Content-Type':
+		'application/json'}, body: JSON.stringify({payload: q.value})
+		}).then(res=>res.json()).then(data=>{ let payload=data.payload;
+		searchResults.innerHTML=''; if(payload.length<1){
+		searchResults.innerHTML='<li class="list-group-item"><p class="noDoc">No
+		Doctors Found</p></li>'; return; } payload.forEach((item, index)=>{
+		searchResults.innerHTML += `<li class="list-group-item"><a
+		href="/doctors-profile/${item._id}">${item.name}</a></li>`;
+		console.log(item.name, item._id, item.qualification, item.department); });
+		}); return; } searchResults.innerHTML=''; }
+
 	</script>
 </nav>
