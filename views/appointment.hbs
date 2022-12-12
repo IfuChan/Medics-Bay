@@ -63,6 +63,7 @@
             <div class="row">
                 <h1 class="font-weight-bold py-4" style="text-align: center;">Make Appointment</h1>
                 <form action="/appointment" method="post">
+                    <input type="hidden" name="doctor_id" value={{doctor}}>
                     <div class="form-row">
                         <div class="col-lg-6 container">
                             <label>Full Name:</label>
@@ -96,11 +97,11 @@
 
                     <div class=" col-lg-6 container">
                         <label>Appointment Date:</label>
-                        <input type="date" id="birthday" class="form-control my-3 p-3" name="birthday">
+                        <input type="date" id="birthday" class="form-control my-3 p-3" name="date">
                     </div>
                     <div class=" col-lg-6 container">
                         <label for="birthday">Time:</label>
-                        <input type="time" id="time" class="form-control my-3 p-3" name="birthday">
+                        <input type="time" id="time" class="form-control my-3 p-3" name="time">
                     </div>
                     <div class="form-row">
                         <div class="col-lg-3 container">

@@ -58,52 +58,22 @@
                                     <th scope="col" width="50">#</th>
                                     <th scope="col">Doctor's Name</th>
                                     <th scope="col">Appointment Date</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Treatment</th>
-                                    <th scope="col">Payment</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Department</th>
                                 </tr>
                             </thead>
                             <tbody>
+
+
+                                {{#each appointments}}
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Tedd Smith</td>
-                                    <td>11/12/2022</td>
-                                    <td>10:00 AM</td>
-                                    <td>Cavity Treatment</td>
-                                    <td>Yes</td>
+                                    <th scope="row">{{@index}}</th>
+                                    <td>{{this.doctor.name}}</td>
+                                    <td>{{ this.timing }}, {{this.date}}</td>
+                                    <td>{{this.status}}</td>
+                                    <td>{{this.doctor.department}}</td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Louis Lane</td>
-                                    <td>13/12/2022</td>
-                                    <td>11:00 AM</td>
-                                    <td>Cavity Treatment</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Tania Khanom</td>
-                                    <td>17/12/2022</td>
-                                    <td>4:00 PM</td>
-                                    <td>Cavity Treatment</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Hifzur Muhammed</td>
-                                    <td>18/12/2022</td>
-                                    <td>12:00 PM</td>
-                                    <td>Cavity Treatment</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Saiful Islam</td>
-                                    <td>22/12/2022</td>
-                                    <td>7:00 PM</td>
-                                    <td>Cavity Treatment</td>
-                                    <td>No</td>
-                                </tr>
+                                {{/each}}
                                 
                         </table>
                     </div>

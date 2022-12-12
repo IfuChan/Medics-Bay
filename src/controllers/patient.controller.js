@@ -1,8 +1,17 @@
 const dummydoc = require("../models/dummydoc");
+const Appointment = require('../models/appointments');
+
+
 
 
 const dashboardView = async (req, res) => {
-    return res.render("dashboard");
+    const { user } = res.locals;
+
+    const appointments = await Appointment.find({ patient: user._id }).populate({ path: "doctor", model: dummydoc });
+
+    return res.render("dashboard", {
+        appointments: appointments
+    });
 }
 
 const getDoctorView = async (req, res) => {
@@ -35,8 +44,6 @@ const getDoctorView = async (req, res) => {
 const getUserProfile = async (req, res) => {
     const { user } = res.locals;
 
-    console.log(req.user);
-
     return res.render("user-profile", {
         username: user.fullname,   //data to show in user profile
         phone: user.phone,
@@ -50,8 +57,12 @@ const getUserProfile = async (req, res) => {
 
 
 const appointmentView = async (req, res) => {
-
+    const { doctorId } = req.params;
     const { user } = res.locals;
+
+    if (!doctorId) {
+        return res.redirect("/dashboard");
+    }
 
     return res.render("appointment", {
         name: user.fullname,   //data to show in user profile
@@ -59,6 +70,7 @@ const appointmentView = async (req, res) => {
         email1: user.email,
         dob: user.birthday.toLocaleDateString('en-CA'),
         gender: user.gender,
+        doctor: doctorId
     });
 }
 
