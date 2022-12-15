@@ -216,12 +216,12 @@ Writting : #2a303b }}
 		document.getElementById('result'); let match=q.value.match(/^[a-zA-Z ]*/);
 		let match2=q.value.match(/\s*/); if (match2[0]===q.value){
 		searchResults.innerHTML=''; return; } if(match[0]===q.value){
-		fetch('searchDoctors', { method: 'POST', headers:{'Content-Type':
-		'application/json'}, body: JSON.stringify({payload: q.value})
-		}).then(res=>res.json()).then(data=>{ let payload=data.payload;
-		searchResults.innerHTML=''; if(payload.length<1){
-		searchResults.innerHTML='<li class="list-group-item"><p class="noDoc">No
-		Doctors Found</p></li>'; return; } payload.forEach((item, index)=>{
+		fetch('/searchDoctors', { method: 'POST', headers:{ 'Content-Type':
+		'application/json' }, body: JSON.stringify({payload: q.value})
+		}).then(res=>res.json()) .then(data=> { let payload=data.payload;
+		searchResults.innerHTML=''; if(payload.length < 1){
+		searchResults.innerHTML=`<li class="list-group-item"><p class="noDoc">No
+		Doctors Found</p></li>`; return; } payload.forEach((item, index)=>{
 		searchResults.innerHTML += `<li class="list-group-item"><a
 		href="/doctors-profile/${item._id}">${item.name}</a></li>`;
 		console.log(item.name, item._id, item.qualification, item.department); });
