@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { isLogin } = require('../middleware/auth.middleware');
+const { isLogin, isAuthenticated } = require('../middleware/auth.middleware');
 const { isUser } = require('../middleware/role.middleware');
 
 const { getDoctorView, getUserProfile, dashboardView, appointmentView } = require('../controllers/patient.controller');

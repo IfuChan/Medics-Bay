@@ -1,9 +1,6 @@
 const dummydoc = require("../models/dummydoc");
 const Appointment = require('../models/appointments');
 
-
-
-
 const dashboardView = async (req, res) => {
     const { user } = res.locals;
 
@@ -35,6 +32,7 @@ const getDoctorView = async (req, res) => {
     });
 
     return res.render("doctors-profile", {
+        id: id,
         name: doctor.name,
         dept: doctor.department,
         qual: doctor.qualification

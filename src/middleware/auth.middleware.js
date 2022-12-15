@@ -5,8 +5,6 @@ const Patient = require("../models/patients");
 const isLogin = async (req, res, next) => {
     const token = req.cookies.jwt;
 
-    console.log(token);
-
     const encryptionKey = process.env.SECRET_KEY || 'medicsbaysecretkey12';
 
     if (!jwt) {
