@@ -13,6 +13,10 @@ const dummyDocSchema= new mongoose.Schema({
         type: String,
         required: true
     },
+    descr: {
+        type: String,
+        required: true
+    },
     lat:{
         type: Number,
         required: true

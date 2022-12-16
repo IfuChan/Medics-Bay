@@ -16,6 +16,17 @@
 
 		<title>Specialist</title>
 		<style>
+			.desc{
+				padding-left: 150px;
+				padding-right: 150px;
+			}
+		@media only screen and (max-width: 1000px) {
+			.desc{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+			
 			.review{
 				margin-top: 20px;
 				width: 300px;
@@ -71,7 +82,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="card-body" style="padding-top: 20px;">
+					<div class="card-body" style="padding-top: 20px; margin-left: 20px;">
 						<h5 class="card-title">Dr. {{name}}</h5>
 						<p class="card-text fs-5">Department: {{dept}}</p>
 						<p class="card-text">{{qual}}</p>
@@ -104,32 +115,9 @@
 
 			</div>
 
-			<div class="text-start fs-5 py-5">
-
+			<div class="desc text-start fs-5 py-5">
 				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel ut
-					magnam, animi nobis similique sunt optio odit sapiente debitis fugiat
-					exercitationem odio deleniti sequi. Perferendis voluptates maiores
-					amet nesciunt inventore. Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Eaque amet voluptatibus animi. Eius expedita eveniet
-					blanditiis sapiente quas, enim maxime consectetur quasi voluptatem aut
-					dignissimos, reprehenderit voluptates minus praesentium dolorem! Lorem
-					ipsum dolor sit amet consectetur adipisicing elit. Corporis porro
-					aliquid quasi corrupti hic ipsa, voluptates harum dolore beatae. Id
-					consequatur porro ipsa harum animi quam distinctio enim optio culpa!
-				</p>
-
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-					totam id saepe. Amet similique quam et adipisci quae eaque. Laborum
-					quas beatae, delectus ea fugiat harum perspiciatis recusandae neque
-					autem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
-					quos soluta, deserunt natus nesciunt cupiditate eaque, maiores
-					eligendi facere est voluptates sit obcaecati ea ut similique odio
-					rerum accusamus culpa. Lorem ipsum, dolor sit amet consectetur
-					adipisicing elit. Veniam temporibus minus dolorum dolores ea quam ut
-					tempora sit non? Iure quidem optio vero fuga delectus recusandae
-					facilis molestiae adipisci blanditiis!
+					{{desc}}
 				</p>
 
 			</div>

@@ -61,7 +61,7 @@ const searchDoctors = async (req, res) => {
             }
         ]
     }).exec();
-    //search.search.slice(0,10); //to limit search results
+    search=search.slice(0,10); //to limit search results
     res.send({ payload: search });
 }
 
