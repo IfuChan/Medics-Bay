@@ -3,14 +3,14 @@ const dummydoc = require("../models/dummydoc");
 const landingView = async (req, res) => {
     const { recvwd } = req.cookies;
 
-    if (!recvwd) {
+    if (recvwd==null) {
         res.locals.recvwd = false;
         return res.render('index');
     }
     res.locals.recvwd = true;
 
 
-    var docId = req.cookies.recvwd;
+    // var docId = req.cookies.recvwd;
 
     var recdoclist = recvwd.split(",");
 
