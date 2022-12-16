@@ -17,19 +17,19 @@ const getDoctorView = async (req, res) => {
 
     const doctor = await dummydoc.findOne({ _id: id });
 
-    if (!recvwd) {
+    if (recvwd == null) {
+        // var temp = recvwd + "," + id;
+        res.cookie("recvwd", id, {
+            expires: new Date(Date.now() + 600000), //expires in 10 min
+            httpOnly: true    //client side can not delete cookie
+        });
+    }else{
         var temp = recvwd + "," + id;
-        res.cookie("recvwd2", temp, {
+        res.cookie("recvwd", temp, {
             expires: new Date(Date.now() + 600000), //expires in 10 min
             httpOnly: true    //client side can not delete cookie
         });
     }
-
-    // set id in cookie
-    res.cookie("recvwd", id, {
-        expires: new Date(Date.now() + 600000), //expires in 10 min
-        httpOnly: true    //client side can not delete cookie
-    });
 
     return res.render("doctors-profile", {
         id: id,
