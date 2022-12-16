@@ -19,7 +19,7 @@ const getDoctorView = async (req, res) => {
 
     if (!recvwd) {
         var temp = recvwd + "," + id;
-        res.cookie("recvwd", temp, {
+        res.cookie("recvwd2", temp, {
             expires: new Date(Date.now() + 600000), //expires in 10 min
             httpOnly: true    //client side can not delete cookie
         });
@@ -35,7 +35,8 @@ const getDoctorView = async (req, res) => {
         id: id,
         name: doctor.name,
         dept: doctor.department,
-        qual: doctor.qualification
+        qual: doctor.qualification,
+        desc: doctor.descr
     });
 }
 

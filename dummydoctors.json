@@ -1,91 +1,181 @@
 [{
   "_id": {
-    "$oid": "6386d46c6922921b23008b60"
+    "$oid": "639c54020f5e7d83933a806b"
   },
-  "name": "Ifad Zaman",
+  "name": "Kumrul Hasan",
   "department": "Psychiatrists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Executive",
+  "qualification": "MBBS, MCPS, MPHIL (Psychiatry), MMEd, Fellow Child Psychiatry (Pakistan), MACP (USA), FRCP (UK)",
+  "descr": "Prof. Brig. Gen. Dr. Kumrul Hasan is a Psychiatrist in Dhaka. His qualification is MBBS, MCPS, MPHIL (Psychiatry), MMEd, Fellow Child Psychiatry (Pakistan), MACP (USA), FRCP (UK). He is a Adviser Specialist in the Department of Psychiatry at Combined Military Hospital, Dhaka. He regularly provides treatment to his patients at Bangladesh Specialized Hospital. Practicing hour of Prof. Brig. Gen. Dr. Kumrul Hasan at Bangladesh Specialized Hospital (Closed: Friday).",
   "lat": "23.807430327535084",
   "lng": "90.40378081129892"
 },{
   "_id": {
-    "$oid": "6386d4a66922921b23008b61"
+    "$oid": "639c54020f5e7d83933a806c"
   },
-  "name": "Umme Sathi",
-  "department": "Urologists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Mekhala Sarkar",
+  "department": "Psychiatrists",
+  "qualification": "MBBS, FCPS (Psychiatry), Fellow WPA (Turkey)",
+  "descr": "Dr. Mekhala Sarkar is a Psychiatrist in Dhaka. Her qualification is MBBS, FCPS (Psychiatry), Fellow WPA (Turkey). She is a Associate Professor in the Department of Psychiatry at National Institute of Mental Health & Hospital. She regularly provides treatment to her patients at Health and Hope Hospital. Practicing hour of Dr. Mekhala Sarkar at Health and Hope Hospital (Closed: Thu & Friday).",
   "lat": "23.77691189513065",
   "lng": "90.36182399943006"
 },{
   "_id": {
-    "$oid": "6386d4c56922921b23008b62"
+    "$oid": "639c54020f5e7d83933a806d"
   },
-  "name": "Eusha Mahzabin",
-  "department": "Gastrologists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Khan Abul Kalam Azad",
+  "department": "Medicine",
+  "qualification": "MBBS (DMC), FCPS (Medicine), MD (Internal Medicine), FACP (USA)",
+  "descr": "Prof. Dr. Khan Abul Kalam Azad is a Medicine Specialist in Dhaka. His qualification is MBBS (DMC), FCPS (Medicine), MD (Internal Medicine), FACP (USA). He is a Professor & Head in the Department of Medicine at Dhaka Medical College & Hospital. He regularly provides treatment to his patients at Popular Diagnostic Center, Dhanmondi. Practicing hour of Prof. Dr. Khan Abul Kalam Azad at Popular Diagnostic Center, Dhanmondi(Closed: Friday).",
   "lat": "23.802810171267094",
   "lng": "90.46230728185955"
 },{
   "_id": {
-    "$oid": "6386d4d96922921b23008b63"
+    "$oid": "639c54020f5e7d83933a806e"
   },
-  "name": "nusrat zahan",
-  "department": "Cardiologists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Shohael Mahmud Arafat",
+  "department": "Medicine",
+  "qualification": "MBBS, FCPS (Medicine), MRCP (UK)",
+  "descr": "Prof. Dr. Shohael Mahmud Arafat is a Medicine Specialist in Dhaka. His qualification is MBBS, FCPS (Medicine), MRCP (UK). He is a Professor in the Department of Internal Medicine at Bangabandhu Sheikh Mujib Medical University Hospital. He regularly provides treatment to his patients at Ibn Sina Diagnostic Center, Dhanmondi. Practicing hour of Prof. Dr. Shohael Mahmud Arafat at Ibn Sina Diagnostic Center, Dhanmond (Sat, Sun, Wed & Thu).",
   "lat": "23.752845789899368",
   "lng": "90.36918137619534"
 },{
   "_id": {
-    "$oid": "6386d50b6922921b23008b64"
+    "$oid": "639c54020f5e7d83933a806f"
   },
-  "name": "John Doe",
-  "department": "Dermatologists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Md. Titu Miah",
+  "department": "Medicine",
+  "qualification": "MBBS, FCPS (Internal Medicine), FWHO (Rheumatology)",
+  "descr": "Prof. Dr. Md. Titu Miah is a Medicine Specialist in Dhaka & Mymensingh. His qualification is MBBS, FCPS (Internal Medicine), FWHO (Rheumatology). He is a Professor in the Department of Medicine at Dhaka Medical College & Hospital. He regularly provides treatment to his patients at Popular Diagnostic Center, Dhanmondi. Practicing hour of Prof. Dr. Md. Titu Miah at Popular Diagnostic Center, Dhanmondi  (Closed: Friday).",
   "lat": "23.730895617961103",
   "lng": "90.38934603825982"
 },{
   "_id": {
-    "$oid": "6386d5286922921b23008b65"
+    "$oid": "639c54020f5e7d83933a8070"
   },
-  "name": "Lionel Messi",
-  "department": "Medicine",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "M.N. Huda",
+  "department": "Dermatologists",
+  "qualification": "MBBS (DMC), DDV (DU), FCPS (Skin & Sex)",
+  "descr": "Prof. Dr. M.N. Huda is a Dermatologist in Dhaka. His qualification is MBBS (DMC), DDV (DU), FCPS (Skin & Sex). He is a Professor (Ex) in the Department of Dermatology & Venereology at Dhaka Medical College & Hospital. He regularly provides treatment to his patients at Popular Diagnostic Center, Uttara. Practicing hour of Prof. Dr. M.N. Huda at Popular Diagnostic Center, Uttara.",
   "lat": "23.814436155385252",
   "lng": "90.38130742277376"
 },{
   "_id": {
-    "$oid": "6386d53a6922921b23008b66"
+    "$oid": "639c54020f5e7d83933a8071"
   },
-  "name": "Cristiano Ronaldo",
-  "department": "Psychiatrists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Md. Siraj Uddin",
+  "department": "Dermatologists",
+  "qualification": "MBBS, DDV (BSMMU), DD (Bangkok)",
+  "descr": "Prof. Dr. Md. Siraj Uddin is a Dermatologist in Dhaka. His qualification is MBBS, DDV (BSMMU), DD (Bangkok). He is a Senior Consultant in the Department of Dermatology & Venereology at Square Hospital, Dhaka. He regularly provides treatment to his patients at Square Hospital, Dhaka. Practicing hour of Prof. Dr. Md. Siraj Uddin at Square Hospital, Dhaka (Closed: Thu & Friday).",
   "lat": "23.77691189513065",
   "lng": "90.36182399943006"
 },{
   "_id": {
-    "$oid": "6386d5496922921b23008b67"
+    "$oid": "639c54020f5e7d83933a8072"
   },
-  "name": "Richarlison",
-  "department": "Urologists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology)  Coordinator & Senior Consultant",
+  "name": "Asfaq Bin Rahman",
+  "department": "Dermatologists",
+  "qualification": "MBBS, BCS (Health), MD (Dermatology)",
+  "descr": "Dr. Asfaq Bin Rahman is a Dermatologist in Dhaka. His qualification is MBBS, BCS (Health), MD (Dermatology). He is a Assistant Professor in the Department of Dermatology & Venereology at Shaheed Tajuddin Ahmad Medical College & Hospital. He regularly provides treatment to his patients at SMC Clinic. Practicing hour of Dr. Asfaq Bin Rahman at SMC Clinic (Closed: Friday).",
   "lat": "23.752845789899368",
   "lng": "90.36918137619534"
 },{
   "_id": {
-    "$oid": "6386d5656922921b23008b68"
+    "$oid": "639c54020f5e7d83933a8073"
   },
-  "name": "Jashim Kan",
-  "department": "Psychiatrists",
-  "qualification": "MBBS, FCPS (ENT), MS (Otolaryngology) Senior Consultant",
+  "name": "Yasmin Joardar",
+  "department": "Dermatologists",
+  "qualification": "MBBS (DU), DDV (DMC)",
+  "descr": "Dr. Yasmin Joardar is a Dermatologist in Dhaka. Her qualification is MBBS (DU), DDV (DMC). She is a Associate Professor in the Department of Dermatology & Venereology at Dr. MR Khan Shishu hospital & Institute of Child Health. She regularly provides treatment to her patients at Ibn Sina Diagnostic Center, Dhanmondi. Practicing hour of Dr. Yasmin Joardar at Ibn Sina Diagnostic Center, Dhanmondi (Sun, Tue & Thu).",
   "lat": "23.802810171267094",
   "lng": "90.46230728185955"
 },{
   "_id": {
-    "$oid": "6386d5746922921b23008b69"
+    "$oid": "639c54020f5e7d83933a8074"
   },
-  "name": "Mr. Something CHoudhury",
-  "department": "Psychiatrists",
-  "qualification": "MBBS, MS (Otolaryngology) Coordinator & Senior Consultant",
+  "name": "Mohammad Mujibur Rahman Shahin",
+  "department": "Cardiologists",
+  "qualification": "MBBS, MD (Cardiology)",
+  "descr": "Dr. Md. Mujibur Rahman Shahin is a Cardiologist in Dhaka. His qualification is MBBS, MD (Cardiology). He is a Consultant in the Department of Cardiology at Ibn Sina Specialized Hospital, Dhanmondi. He regularly provides treatment to his patients at Ibn Sina Specialized Hospital, Dhanmondi. Practicing hour of Dr. Md. Mujibur Rahman Shahin at Ibn Sina Specialized Hospital, Dhanmondi. (Closed: Friday).",
   "lat": "23.746735034118778",
   "lng": "90.41523310483726"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a8075"
+  },
+  "name": "Mohsin Ahmed",
+  "department": "Cardiologists",
+  "qualification": "MBBS, MCPS (Medicine), MD (Cardiology), FIC, FACC, FESC (USA), FSCAI, FAPSIC",
+  "descr": "Dr. Mohsin Ahmed is a Cardiologist in Dhaka. His qualification is MBBS, MCPS (Medicine), MD (Cardiology), FIC, FACC, FESC (USA), FSCAI, FAPSIC. He is a Associate Professor in the Department of Cardiology at Dhaka Medical College & Hospital. He regularly provides treatment to his patients at Ibn Sina Diagnostic Center, Doyagonj. Practicing hour of Dr. Mohsin Ahmed at Ibn Sina Diagnostic Center, Doyagonj. (Sat, Mon & Wed).",
+  "lat": "23.77691189513065",
+  "lng": "90.36182399943006"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a8076"
+  },
+  "name": "Farhana Ahmed",
+  "department": "Cardiologists",
+  "qualification": "MBBS, FCPS(Cardiology) FCPS (Medicine),FSCAI",
+  "descr": "Dr. Farhana Ahmed is a Cardiologist in Dhaka. Her qualification is MBBS, FCPS (Medicine), FCPS (Cardiology). She is working as a Cardiology & Medicine Specialist doctor in National Institute of Cardiovascular Diseases & Hospital. She regularly provides treatment to her patients at Labaid Specialized Hospital, Dhanmondi. Practicing hour of Dr. Farhana Ahmed at Labaid Specialized Hospital, Dhanmondi. (Closed: Friday).",
+  "lat": "23.807430327535084",
+  "lng": "90.40378081129892"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a8077"
+  },
+  "name": "Zehad Khan",
+  "department": "Cardiologists",
+  "qualification": "MBBS, FCPS, MD, MPCS, MRCP(Glasgo), FACC(USA)",
+  "descr": "Prof. Col. Dr. Zehad Khan is a Cardiologist in Dhaka. His qualification is MBBS, MD, MCSP, FCPS, FACC. He is a Former Professor in the Department of Cardiology at Combined Military Hospital, Dhaka. He regularly provides treatment to his patients at Ibn Sina Specialized Hospital, Dhanmondi. Practicing hour of Prof. Col. Dr. Zehad Khan at Ibn Sina Specialized Hospital, Dhanmondi (Closed: Friday).",
+  "lat": "23.802810171267094",
+  "lng": "90.46230728185955"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a8078"
+  },
+  "name": "Md.Mohsin Hossain",
+  "department": "Cardiologists",
+  "qualification": "MBBS,FCPS,MD",
+  "descr": "Prof. Dr. Md. Mohsin Hossain is a Cardiologist in Dhaka. His qualification is MBBS, MD (Internal Medicine), FCPS (Cardiology). He is a Professor in the Department of Cardiology at National Institute of Cardiovascular Diseases & Hospital. He regularly provides treatment to his patients at Labaid Specialized Hospital, Dhanmondi. Practicing hour of Prof. Dr. Md. Mohsin Hossain at Labaid Specialized Hospital, Dhanmondi. (Closed: Tue & Friday).",
+  "lat": "23.752845789899368",
+  "lng": "90.36918137619534"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a8079"
+  },
+  "name": "Md. Mahtabur Rahman",
+  "department": "Gastrologists",
+  "qualification": "MBBS, BCS (Health)",
+  "descr": "Dr. Md. Mahbubur Rahman is a Gastroenterologist in Dhaka. His qualification is MBBS (DMC), CCD (BIRDEM), MD (Gastroenterology). He is a Assistant Professor in the Department of Gastroenterology at Uttara Adhunik Medical College & Hospital. He regularly provides treatment to his patients at Labaid Specialized Hospital, Dhanmondi. Practicing hour of Dr. Md. Mahbubur Rahman at Labaid Specialized Hospital, Dhanmondi. (Closed: Friday).",
+  "lat": "23.752845789899368",
+  "lng": "90.36918137619534"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a807a"
+  },
+  "name": "Md. Kamrul Islam",
+  "department": "Urologists",
+  "qualification": "MBBS, FCPS (Surgery), MS (Urology), FRCS (UK)",
+  "descr": "Prof. Dr. Md. Kamrul Islam is a Urologist in Dhaka. His qualification is MBBS, FCPS (Surgery), MS (Urology), FRCS (UK). He is a Former Professor in the Department of Urology at Dhaka Medical College & Hospital. He regularly provides treatment to his patients at Center for Kidney Disease & Urology Hospital. Practicing hour of Prof. Dr. Md. Kamrul Islam at Center for Kidney Disease & Urology Hospital (Tue, Thu & Fri).",
+  "lat": "23.752845789899368",
+  "lng": "90.36918137619534"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a807b"
+  },
+  "name": "M. A. Salam",
+  "department": "Urologists",
+  "qualification": "MBBS, FCPS, FICS (USA), WHO Fellow (UK)",
+  "descr": "Prof. Dr. M. A. Salam is a Urologist in Dhaka. His qualification is MBBS, FCPS, FICS (USA), WHO Fellow (UK). He is a Former Chairman & Professor in the Department of Uro-Oncology at Bangabandhu Sheikh Mujib Medical University Hospital. He regularly provides treatment to his patients at Comfort Diagnostic Center, Dhanmondi. Practicing hour of Prof. Dr. M. A. Salam at Comfort Diagnostic Center, Dhanmondi  (Closed: Thursday & Friday).",
+  "lat": "23.802810171267094",
+  "lng": "90.46230728185955"
+},{
+  "_id": {
+    "$oid": "639c54020f5e7d83933a807c"
+  },
+  "name": "ATM Mowladad Chowdhury",
+  "department": "Urologists",
+  "qualification": "MBBS, MS (Urology), FCPS (Surgery), MRCS (Edinburgh), MRCPS (Glasgow)",
+  "descr": "Prof. Dr. ATM Mowladad Chowdhury is a Urologist in Dhaka. His qualification is MBBS, MS (Urology), FCPS (Surgery), MRCS (Edinburgh), MRCPS (Glasgow). He is a Former Professor in the Department of Urology at Birdem General Hospital & Ibrahim Medical College. He regularly provides treatment to his patients at Evercare Hospital, Dhaka. Practicing hour of Prof. Dr. ATM Mowladad Chowdhury at Evercare Hospital, Dhaka (Closed: Friday).",
+  "lat": "23.807430327535084",
+  "lng": "90.40378081129892"
 }]
