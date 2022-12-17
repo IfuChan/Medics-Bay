@@ -1,178 +1,172 @@
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		{{! Bootstrap css cdn link }}
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-			crossorigin="anonymous"
-		/>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Home</title>
-    <style>
-      @media only screen and (max-width: 770px) {
-        .contactus{
-          margin: 50px 20px 50px; 
-          padding: 5px 30px;
-        }
-        .recentView{
-          width: 100%;
-          margin: 0 auto;
-        }
+  {{! Bootstrap css cdn link }}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+
+  <title>Home</title>
+  
+  <style>
+    @media only screen and (max-width: 770px) {
+      .contactus {
+        margin: 50px 20px 50px;
+        padding: 5px 30px;
       }
-      @media only screen and (min-width: 770px) {
-        .contactus{
-          margin: 50px 20px 50px; 
-          padding: 10px 100px;
-        }
-      }
-      .recsec{
-        border-top: 5px solid teal;
-        border-bottom: 5px solid teal;
-      }
-    </style>
-	</head>
-	
-	<body>
 
-    {{>navbar}}
+      .recentView {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
 
-<section>
-       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner1.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
+    @media only screen and (min-width: 770px) {
+      .contactus {
+        margin: 50px 20px 50px;
+        padding: 10px 100px;
+      }
+    }
+
+    .recsec {
+      border-top: 5px solid teal;
+      border-bottom: 5px solid teal;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  {{>navbar}}
+
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner1.jpg"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
             <h1 style="font-size:80px"> <span style="color:#1cc3b2;">M</span>edic's Bay</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum natus id asperiores ullam enim sapiente
-              corrupti dicta. Repellat earum amet, repellendus libero quam soluta natus maxime minus ipsam
-              reprehenderit.</p>
+            <p>More than 1,600 physicians utilize Medic's Bay to provide the best care possible to their patients. They
+              know they can count on Medic's Bay to provide state-of-the-art treatment and technology and it will be
+              combined with the heart-felt compassion which is needed when patients seek medical attention.</p>
           </div>
-    </div>
-    <div class="carousel-item">
-      <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner2.jpg" class="d-block w-100" alt="...">
-     <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
+        </div>
+        <div class="carousel-item">
+          <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner2.jpg"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
             <h1 style="font-size:80px"><span style="color:#1cc3b2;">M</span>edic's Bay</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum natus id asperiores ullam enim sapiente
-              corrupti dicta. Repellat earum amet, repellendus libero quam soluta natus maxime minus ipsam
-              reprehenderit.</p>
+            <p>The Medic's Bay provides health organizations that strive for excellence and quality care, with a tool
+              that allows physicians to measure themselves against key performance indicators set by the organization.
+            </p>
           </div>
-    </div>
-    <div class="carousel-item">
-      <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner3.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
+        </div>
+        <div class="carousel-item">
+          <img style="height: 750px; width: 100%;   filter: blur(5px);" src="/static/images/banner3.jpg"
+            class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block fs-5" style="color:white; font-weight: 500;">
             <h1 style="font-size:80px"><span style="color:#1cc3b2;">M</span>edic's Bay</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eum natus id asperiores ullam enim sapiente
-              corrupti dicta. Repellat earum amet, repellendus libero quam soluta natus maxime minus ipsam
-              reprehenderit.</p>
+            <p>This tool helps optimize physician practices in compliance with the organization’s guidelines, offering
+              valuable statistics. Health organizations can easily get creative with this tool by setting targets for
+              practices, and even promoting healthy competition between physicians to increase engagement in providing
+              useful metrics, and overall better quality of service.</p>
           </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</section>
-     
+  </section>
 
-    <section style="background-color: #1cc3b229; padding-top: 200px; padding-bottom: 200px;">
+
+  <section style="background-color: #1cc3b229; padding-top: 200px; padding-bottom: 200px;">
     <div class="card-body text-center">
-      <h3 class="card-title" style="padding-bottom: 50px; color: #1cc3b2;">Notice to Providers of Best Choice Plus
-        Network Dissolution
-      </h3>
-      <p class="card-text text-center text-break" style="color: #2a303b;">Lorem ipsum, dolor sit
-        Doctor-On-Demand-App-Development-Solution_banner_imgbr <br> consectetur adipisicing elit. Dolorum
-        vitae incidunt
-        nemo
-        veritatis magnam accusamus fuga <br> libero corporis atque doloribus eaque expedita, earum soluta, ex facere
-        perspiciatis odio quos minus! Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Assumenda autem
-        eaque
-        perspiciatis mollitia molestiae numquam eos quidem aspernatur <br> earum delectus consequatur exercitationem, ad
-        iusto suscipit veritatis ex, architecto quibusdam quia?</p>
-      <button
-        style="background-color: #1cc3b2; padding: 10px; color: #2a303b; margin-top: 10px; border-radius: 5px; font-weight: 600;">Know
-        About
-        More</button>
+      <h3 class="card-title" style="padding-bottom: 50px; color: #1cc3b2;">MODERN MEDICAL FACILITIES</h3>
+      <p class="card-text text-center text-break" style="color: #2a303b;">Here, patients receive genuine care and comfort from experienced staff in pleasant, comfortabl surroundings. You can relax, knowing that you are being looked after by trained and skilled staff working with the latest technology. <br> There are currently more than 88 doctors having their chambers at Medic's Bay. Medic's Bay is owned by a group of dedicated souls for Healthcare. The Group’s strength includes its commitment to <br> Quality, leasing edge technology and infrastructure for doctor’s and staff’s continuing professional development.
+      </p>
+      <a href="/aboutus"> 
+      <button style="background-color: #1cc3b2; padding: 10px; color: #2a303b; margin-top: 10px; border-radius: 5px; font-weight: 600;">Know About More</button>
+      </a>
     </div>
   </section>
 
 
   <section style="background-color: #212529; padding-top: 200px; padding-bottom: 200px;">
     <div class="card-body text-center">
-      <h3 class="card-title" style="padding-bottom: 50px; color: #1cc3b2;">Special title treatment</h3>
-      <p class="card-text" style="color: white;">With supporting text belio quos minus! Lorem ipsum dolor sit amet
-        <br> consectetur
-        adipisicing elit. Assumenda autem
-        eaque
-        perspiciatis mollitia molestiae numquam eos quidem aspernatur <br> earum delectus consequatur exercitationem, ad
-        iusto suscipit veritatis ex, architecto quibusdaow as a natural lead-in to additional content.
+      <h3 class="card-title" style="padding-bottom: 50px; color: #1cc3b2;">EMERGENCY</h3>
+      <p class="card-text" style="color: white;">Medic's Bay maintains a full-fledged emergency service support team, consisting <br> of necessary doctors for 24 hours. One can get the required treatment <br> at any time of the day. There are arrangements for close observation <br> of the patient without being admitted to the hospital. 
       </p>
     </div>
   </section>
 
-  <section>
-
-<div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14599.89149943329!2d90.44560068552339!3d23.81956358290749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c62fce7d991f%3A0xacfaf1ac8e944c05!2sBasundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1669565152562!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-    
-  </section>
-
+{{!-- Recently Viewed Doctors --}}
   {{#if recvwd}}
   <section class="recsec py-5">
-    <div class="container">
 
-    
-    <h1 class="mt-2 mb-3 text-muted text-center">Recently Viewed Doctors</h1>
-    <div class="gap-3 justify-content-center d-md-flex justify-content-md-start">
-      {{#each recdoc}}
+    <div class="container">
+      <h1 class="mt-2 mb-3 text-muted text-center">Recently Viewed Doctors</h1>
+      <div class="gap-3 justify-content-center d-md-flex justify-content-md-start">
+        {{#each recdoc}}
         <div class="recentView card shadow-sm mb-3" style="max-width: 240px;">
-        <div class="row g-0">
-          <div class="col-4 d-flex flex-column p-2">
-            <img src="/static/images/docplaceholder/1.jpg" class="img-fluid rounded-circle border border-info shadow-sm" alt="doctor image" width="70px">
-          </div>
-          <div class="col-8">
-            <div class="card-body p-2">
-              <h5 class="card-title"><a href="/doctors-profile/{{this._id}}" class="stretched-link" style="text-decoration: none; color: black;">Dr. {{this.name}}</a></h5>
-              <p class="card-text"> Dept: {{this.department}}</p>
-              <p class="card-text position-absolute bottom-0"><small class="text-muted">Available now</small></p>
+          <div class="row g-0">
+            <div class="col-4 d-flex flex-column p-2">
+              <img src="/static/images/docplaceholder/1.jpg"
+                class="img-fluid rounded-circle border border-info shadow-sm" alt="doctor image" width="70px">
+            </div>
+            <div class="col-8">
+              <div class="card-body p-2">
+                <h5 class="card-title"><a href="/doctors-profile/{{this._id}}" class="stretched-link"
+                    style="text-decoration: none; color: black;">Dr. {{this.name}}</a></h5>
+                <p class="card-text"> Dept: {{this.department}}</p>
+                <p class="card-text position-absolute bottom-0"><small class="text-muted">Available now</small></p>
+              </div>
             </div>
           </div>
         </div>
+        {{/each}}
       </div>
-      {{/each}}
+    </div>
 
-    </div>
-    </div>
   </section>
   {{/if}}
 
-    <section class="contactus">
+{{!-- Contactus --}}
+  <section class="contactus">
 
     <div style="padding-bottom: 30px;">
       <h1>Contact Us</h1>
     </div>
+
     <form>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" style=" max-width: 600px;"  id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" class="form-control" style=" max-width: 600px;" id="exampleInputEmail1"
+          aria-describedby="emailHelp">
         <div class="mb-3" style="margin-top: 40px;">
           <label for="exampleFormControlTextarea1" class="form-label">Say Something</label>
-          <textarea class="form-control" style=" max-width: 600px;" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" style=" max-width: 600px;" id="exampleFormControlTextarea1"
+            rows="3"></textarea>
         </div>
 
         <button type="submit"
@@ -181,14 +175,25 @@
 
   </section>
 
+{{!-- Map --}}
+    <section>
+
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14599.89149943329!2d90.44560068552339!3d23.81956358290749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c62fce7d991f%3A0xacfaf1ac8e944c05!2sBasundhara%20Residential%20Area%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1669565152562!5m2!1sen!2sbd"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </section>
+
   {{>footer}}
 
-		{{! Bootstrap js cdn link }}
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-			crossorigin="anonymous"
-		></script>
+  {{! Bootstrap js cdn link }}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
 
-	</body>
+</body>
+
 </html>
