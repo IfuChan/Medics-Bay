@@ -24,17 +24,15 @@ npm run dev
 ## Screenshots of  some features:
 
 <img src="assets/1.jpg" width=50%>
-
-![SignUp](assets/3.jpg)
-
-![Sign In](assets/2.jpg)
-![Livesearch](assets/7.jpg)
+<img src="assets/3.jpg" width=50%>
+<img src="assets/2.jpg" width=50%>
+<img src="assets/7.jpg" width=50%>
 
 Doctors list and location from Google Map API:
-![Doc loc](assets/4.jpg)
-![Doc loc](assets/5.jpg)
+<img src="assets/4.jpg" width=50%>
+<img src="assets/5.jpg" width=50%>
 
-![Appointment dashboard](assets/6.jpg)
+<img src="assets/6.jpg" width=50%>
+<img src="assets/8.jpg" width=50%>
 
-![Cookie implementation](assets/8.jpg)
 
