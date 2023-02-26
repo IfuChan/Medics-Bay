@@ -28,7 +28,7 @@ npm run dev
 <img src="assets/2.jpg" width=50%>
 <img src="assets/7.jpg" width=50%>
 
-Doctors list and location from Google Map API:
+Doctors list and location from Google Map API:  
 <img src="assets/4.jpg" width=50%>
 <img src="assets/5.jpg" width=50%>
 
