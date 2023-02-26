@@ -23,7 +23,7 @@ npm run dev
 
 ## Screenshots of  some features:
 
-![Homepage](assets/1.jpg)
+<img src="assets/1.jpg" width=50%>
 
 ![SignUp](assets/3.jpg)
 
