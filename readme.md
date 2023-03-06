@@ -33,6 +33,6 @@ Doctors list and location from Google Map API:
 <img src="assets/5.jpg" width=50%>
 
 <img src="assets/6.jpg" width=50%>
-<img src="assets/8.jpg" width=50%>
+<img src="assets/8.jpg">
 
 
